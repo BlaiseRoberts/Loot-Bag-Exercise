@@ -118,7 +118,7 @@ class Bag:
 
 if __name__ == '__main__':
 	lootBag = Bag()
-	sys_arg_list = "Commands for Module:\n-------------------\nadd {toy} {child} - Adds toy to child's list and child to Santa's list, \nremove {toy} {name} - Removes a toy from a child's list, \nls - List's all children on Santa's list, \nls {name} - List's all the toys for a child, \ndelivered - Delivers a child's toys, \nbad {name} - Removes all toys from child and takes child off list"
+	sys_arg_list = "Commands for Module:\n-------------------\n'add {toy} {child}' - Adds toy to child's list and child to Santa's list, \n'remove {toy} {name}' - Removes a toy from a child's list, \n'ls' - List's all children on Santa's list, \n'ls {name}' - List's all the toys for a child, \n'delivered' - Delivers a child's toys, \n'bad {name}' - Removes all toys from child and takes child off list"
 	if sys.argv[1] == 'add':
 		lootBag.add_to_bag(sys.argv[2], sys.argv[3])
 	if sys.argv[1] == 'remove':
@@ -136,3 +136,5 @@ if __name__ == '__main__':
 		lootBag.remove_child_from_list(sys.argv[2])		
 	if sys.argv[1] == 'help':
 		print(sys_arg_list)
+	else:
+		print("Invalid Command you jerk,\nyou can type 'help' for a list of commands")
